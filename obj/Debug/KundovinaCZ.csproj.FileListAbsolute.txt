@@ -1,0 +1,11 @@
+D:\repos\KundovinaCZ\bin\Debug\KundovinaCZ.exe.config
+D:\repos\KundovinaCZ\bin\Debug\KundovinaCZ.exe
+D:\repos\KundovinaCZ\bin\Debug\KundovinaCZ.pdb
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.csproj.AssemblyReference.cache
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.csproj.SuggestedBindingRedirects.cache
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.Form1.resources
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.Properties.Resources.resources
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.csproj.GenerateResource.cache
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.csproj.CoreCompileInputs.cache
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.exe
+D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.pdb
