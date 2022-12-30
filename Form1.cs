@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Microsoft.Win32;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.Win32;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
-namespace KundovinaCZ
+namespace SkimoHandlingTool
 {
     public partial class Form1 : Form
     {
@@ -18,56 +13,80 @@ namespace KundovinaCZ
         {
             InitializeComponent();
         }
-        private static void errorBox(string error)
+        private static void alertBox(string type, string message)
         {
-            if(MessageBox.Show(error) == DialogResult.OK)
+            if (MessageBox.Show(message) == DialogResult.OK)
             {
-                Application.Exit();
+                if (type == "error")
+                    Application.Exit();
             }
-           
+
         }
         private static void checkSkimoFiles()
         {
             var key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\WOW6432Node\\Multi Theft Auto: San Andreas All\\Common");
             if (key == null)
             {
-                errorBox("Nemáš nainstalované MTA!");
+                alertBox("error", "Nemáš nainstalované MTA!");
             }
 
             var p = key?.GetValue("File Cache Path") as string;
 
             if (string.IsNullOrEmpty(p))
             {
-                errorBox("Během získávání cesty k MTA nastala chyba!");
+                alertBox("error", "Během získávání cesty k MTA nastala chyba!");
             }
 
             string path = p + "/resources/";
-            string[] subdirs = Directory.GetDirectories(path).Select(Path.GetFileName).ToArray();
-
-            if (subdirs.Length > 0)
+            try
             {
-                bool found = false;
-
-                foreach (string folder in subdirs)
+                string[] subdirs = Directory.GetDirectories(path).Select(Path.GetFileName).ToArray();
+                if (subdirs.Length > 0)
                 {
-                    if (folder == "skimo_updater") { found = true; break; }
+                    bool found = false;
+
+                    foreach (string folder in subdirs)
+                    {
+                        if (folder == "skimo_updater") { found = true; break; }
+                    }
+
+                    if (!found)
+                    {
+                        alertBox("error", "Nejdřív se budeš muset alespoň jednou připojit na Skimo!");
+                    }
                 }
-
-                if (!found)
+                else
                 {
-                    errorBox("Nejdřív se budeš muset alespoň jednou připojit na Skimo!");
+                    alertBox("error", "Tvá resources složka je prázdná! Zkus se připojit na Skimo, aby se ti znovu stáhly všechny potřebné soubory");
                 }
             }
-            else
+            catch
             {
-                errorBox("Tvá resources složka je prázdná! Zkus se připojit na Skimo, aby se ti znovu stáhly všechny potřebné soubory");
+                Exception e = new Exception();
+                alertBox("error", e.ToString());
             }
 
 
         }
+        private void checkHeditPath()
+        {
+            //prompt po prvnim spuštění ukládající cestu ke složce s heditem
+            //následný check, pokud tam ty soubory jsou, pokud ne, tak vyhodit znovu prompt a pak to přepsat v configu
+            //následně znovu spustit celou funkci znovu a v případě úspěchu vypsat soubory do selectboxu
+        }
+        private void listAllHeditFiles()
+        {
+
+        }
+        private void heditToLuaTable(string path, string title, int vehlib, int owner)
+        {
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             checkSkimoFiles();
+            checkHeditPath();
         }
     }
 }

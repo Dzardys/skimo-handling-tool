@@ -9,3 +9,14 @@ D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.csproj.GenerateResource.cache
 D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.csproj.CoreCompileInputs.cache
 D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.exe
 D:\repos\KundovinaCZ\obj\Debug\KundovinaCZ.pdb
+C:\Users\kinde\Source\Repos\skimo-handling-tool\bin\Debug\KundovinaCZ.exe.config
+C:\Users\kinde\Source\Repos\skimo-handling-tool\bin\Debug\KundovinaCZ.exe
+C:\Users\kinde\Source\Repos\skimo-handling-tool\bin\Debug\KundovinaCZ.pdb
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.csproj.AssemblyReference.cache
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.csproj.SuggestedBindingRedirects.cache
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.Form1.resources
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.Properties.Resources.resources
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.csproj.GenerateResource.cache
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.csproj.CoreCompileInputs.cache
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.exe
+C:\Users\kinde\Source\Repos\skimo-handling-tool\obj\Debug\KundovinaCZ.pdb

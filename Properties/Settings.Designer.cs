@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KundovinaCZ.Properties
+namespace SkimoHandlingTool.Properties
 {
 
 
